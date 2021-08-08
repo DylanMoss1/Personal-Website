@@ -1,3 +1,4 @@
 build:
   docker:
-    web: docker-compose
+    web_client: client/Dockerfile
+    web_server: server/Dockerfile
