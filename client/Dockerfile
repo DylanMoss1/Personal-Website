@@ -12,7 +12,6 @@ RUN npm run build
 
 RUN yarn global add serve
 
-EXPOSE 3000
 EXPOSE 5000
 
 CMD [ "serve", "-s", "build"]
