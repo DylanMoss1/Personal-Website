@@ -16,8 +16,6 @@ try{
     password = ENV['EMAIL_PASSWORD']
 }
 
-
-
 app.use(cors());
 app.use(express.json());
 
