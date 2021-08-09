@@ -6,8 +6,10 @@ COPY ./package.json ./
 
 RUN yarn install
 
+RUN npm install nodemailer
+
 COPY ./ .
 
 EXPOSE 4000
 
-CMD ["node", "index.js"]
+CMD ["node", "index"]
