@@ -32,12 +32,7 @@ const transporter = nodemailer.createTransport({
     }
 });
 
-app.get("/", function(req, res) {
-    console.log("request recieved");
-});
-
 app.get("/api", (req, res) => {
-    console.log("request recieved");
     res.json({ message: "Hello from server!" });
 });
   
