@@ -24,6 +24,4 @@ RUN npm install -g serve
 
 EXPOSE 4000
 
-WORKDIR /usr/src/server
-
-CMD ["node", "index"]
+CMD ["node", "/usr/src/server/index"]
