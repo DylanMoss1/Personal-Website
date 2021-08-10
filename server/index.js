@@ -1,6 +1,7 @@
 const express = require("express");
 const app = express();
 const cors = require("cors");
+const path = require('path');
 
 const PORT = process.env.PORT || 4000;
 
@@ -18,8 +19,10 @@ try{
     password = process.env.EMAIL_PASSWORD
 }
 
+app.set('port', PORT);
 app.use(cors());
 app.use(express.json());
+app.use(express.static(path.resolve(__dirname, '../client/build')));
 
 const transporter = nodemailer.createTransport({
     service: 'gmail',
@@ -29,9 +32,18 @@ const transporter = nodemailer.createTransport({
     }
 });
 
+app.get("/", function(req, res) {
+    console.log("request recieved");
+});
+
+app.get("/api", (req, res) => {
+    console.log("request recieved");
+    res.json({ message: "Hello from server!" });
+});
+  
 app.listen(PORT, () => {
 
-    console.log("server has started on port 5000");
+    console.log(`server has started on port ${PORT}`);
     
     var mailOptions = {
         from: email,
@@ -40,6 +52,7 @@ app.listen(PORT, () => {
         text: 'That was easy!'
     };
   
+    /*
     transporter.sendMail(mailOptions, function(error, info){
         if (error) {
             console.log(error);
@@ -47,4 +60,5 @@ app.listen(PORT, () => {
             console.log('Email sent: ' + info.response);
         }
     }); 
+    */
 });
