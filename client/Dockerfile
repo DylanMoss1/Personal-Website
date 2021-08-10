@@ -8,14 +8,14 @@ RUN yarn install
 
 COPY ./ .
 
-#RUN npm run build
+RUN npm run build
 
-#RUN npm install -g serve
+RUN npm install -g serve
 
-#EXPOSE 5000
+EXPOSE 5000
 
-#CMD [ "serve", "-s", "build"]
+CMD [ "serve", "-s", "build"]
 
-EXPOSE 3000
+#EXPOSE 3000
 
-CMD ["yarn", "start"]
+#CMD ["yarn", "start"]
