@@ -12,8 +12,8 @@ try{
     email = private_info.email;
     password = private_info.password;
 } catch (e) {
-    email = ENV['EMAIL_ADDRESS']
-    password = ENV['EMAIL_PASSWORD']
+    email = process.env.EMAIL_ADDRESS
+    password = process.env.EMAIL_PASSWORD
 }
 
 app.use(cors());
