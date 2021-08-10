@@ -2,6 +2,8 @@ const express = require("express");
 const app = express();
 const cors = require("cors");
 
+const PORT = process.env.PORT || 4000;
+
 const nodemailer = require('nodemailer'); 
 
 var email;
@@ -27,7 +29,7 @@ const transporter = nodemailer.createTransport({
     }
 });
 
-app.listen(4000, () => {
+app.listen(PORT, () => {
 
     console.log("server has started on port 5000");
     
