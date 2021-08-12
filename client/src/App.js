@@ -1,22 +1,26 @@
 import './App.css';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Home from './components/pages/Home';
-import About from './components/pages/About';
-import Projects from './components/pages/Projects';
-import Contact from './components/pages/Contact';
-import Navbar from './components/Navbar';
-import Footer from './components/Footer';
+import Gary from './components/pages/Gary';
+import Rubiks from './components/pages/Rubiks';
+import This from './components/pages/This';
+import Gantt from './components/pages/Gantt';
+import Other from './components/pages/Other';
+import Navbar from './components/navbar/Navbar';
+import Footer from './components/footer/Footer';
 
 function App() {
   return (
     <>
       <Router>
         <Navbar />
-        <Switch> 
+        <Switch>
           <Route path='/' exact component={Home} /> 
-          <Route path='/about' component={About} />
-          <Route path='/projects' component={Projects} />
-          <Route path='/contact' component={Contact} />
+          <Route path='/gary' component={Gary} />
+          <Route path='/rubiks' component={Rubiks} />
+          <Route path='/this' component={This} />
+          <Route path='/gantt' component={Gantt} />
+          <Route path='/other' component={Other} />
         </Switch>
         <Footer />
       </Router>
