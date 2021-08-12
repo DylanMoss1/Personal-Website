@@ -70,19 +70,6 @@ app.get("/db", async (req,res) => {
     
 });
 
-/*
-app.get("db", async (req, res) => {
-    
-    const contact_me = await db.contact_me;
-    
-    try { 
-        res.send(users);
-    } catch (e) { 
-        res.status(500).send(error);
-    }
-});
-*/
-
 app.get('*', (req, res) => {
     res.sendFile(path.resolve(__dirname, '../client/build', 'index.html'));
 });
