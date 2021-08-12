@@ -26,7 +26,7 @@ try{
     uri = process.env.MONGODB_URI
 }
 
-const db = new MongoClient(uri);
+const client = new MongoClient(uri);
 
 app.set('port', port);
 app.use(cors());
@@ -45,8 +45,35 @@ app.get("/api", (req, res) => {
     res.json({ message: "Hello from server!" });
 });
 
+app.get("/db", async (req,res) => {
+
+    try { 
+
+        await client.connect();
+
+        const results = await client.db("ContactRequests").collection("contact_me").findOne({name: "Dylan"});
+    
+        console.log(results)
+        console.log(results.content);
+
+        res.json({ message: results.content });
+
+    } catch (e) {
+
+        console.log(e);
+
+    } finally {
+
+        await client.close();
+
+    }
+    
+});
+
+/*
 app.get("db", async (req, res) => {
-    const users = await db;
+    
+    const contact_me = await db.contact_me;
     
     try { 
         res.send(users);
@@ -54,10 +81,21 @@ app.get("db", async (req, res) => {
         res.status(500).send(error);
     }
 });
+*/
 
 app.get('*', (req, res) => {
     res.sendFile(path.resolve(__dirname, '../client/build', 'index.html'));
 });
+
+
+async function listDatabases(client) {
+    db_list = await client.db().admin().listDatabases();
+
+    console.log("Databases:");
+
+    db_list.databases.forEach(db => console.log(   ` - ${db.name}`));
+}
+
   
 app.listen(port, async() => {
 
@@ -70,7 +108,22 @@ app.listen(port, async() => {
         text: 'That was easy!'
     };
 
-  
+    try {
+
+        await client.connect();
+
+        await listDatabases(client);
+
+    } catch (e) {
+
+        console.log(e);
+
+    } finally {
+
+        await client.close();
+
+    }
+
     /*
     transporter.sendMail(mailOptions, function(error, info){
         if (error) {
