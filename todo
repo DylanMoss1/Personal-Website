@@ -1,0 +1,3 @@
+- Change dyno name
+- Remove username and password for mongodb from private info
+- Check if mongodb correctly installs

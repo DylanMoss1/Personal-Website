@@ -3,25 +3,32 @@ const app = express();
 const cors = require("cors");
 const path = require('path');
 
-const {MongoClient} = require('mongodb');
+const { MongoClient } = require('mongodb');
 
-const PORT = process.env.PORT || 4000;
+const port = process.env.PORT || 4000;
 
 const nodemailer = require('nodemailer'); 
+const { response } = require("express");
 
 var email;
-var password; 
+var password;
+var uri;
 
 try{
     const private_info = require('./private_info.json');
     email = private_info.email;
     password = private_info.password;
+    uri = private_info.uri;
+
 } catch (e) {
     email = process.env.EMAIL_ADDRESS
     password = process.env.EMAIL_PASSWORD
+    uri = process.env.MONGODB_URI
 }
 
-app.set('port', PORT);
+const db = new MongoClient(uri);
+
+app.set('port', port);
 app.use(cors());
 app.use(express.json());
 app.use(express.static(path.resolve(__dirname, '../client/build')));
@@ -38,13 +45,23 @@ app.get("/api", (req, res) => {
     res.json({ message: "Hello from server!" });
 });
 
+app.get("db", async (req, res) => {
+    const users = await db;
+    
+    try { 
+        res.send(users);
+    } catch (e) { 
+        res.status(500).send(error);
+    }
+});
+
 app.get('*', (req, res) => {
     res.sendFile(path.resolve(__dirname, '../client/build', 'index.html'));
 });
   
-app.listen(PORT, () => {
+app.listen(port, async() => {
 
-    console.log(`server has started on port ${PORT}`);
+    console.log(`server has started on port ${port}`);
     
     var mailOptions = {
         from: email,
@@ -52,6 +69,7 @@ app.listen(PORT, () => {
         subject: 'Sending Email using Node.js',
         text: 'That was easy!'
     };
+
   
     /*
     transporter.sendMail(mailOptions, function(error, info){
