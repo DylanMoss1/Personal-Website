@@ -2,8 +2,7 @@ import styled from 'styled-components'
 
 export const InfoContainer = styled.div`
     color: #fff;
-    background: ${({lightBg}) => (lightBg ? '#f9f9f9' : '010606')};
-
+    background: ${({lightBg}) => (lightBg ? '#f9f9f9' : '#010606')};
     @media screen and (max-width: 768px) {
         padding: 100px 0;
     }
@@ -12,12 +11,11 @@ export const InfoContainer = styled.div`
 export const InfoWrapper = styled.div`
     display: grid;
     z-index: 1;
-    height: 860px;
     width: 100%;
     max-wdth: 1100px;
     margin-right: auto;
-    margin-left: auto; 
-    padding: 0 24px;
+    margin-left: auto;
+    padding: 120px 120px;
     justify-content: center; 
 `
 
@@ -26,7 +24,6 @@ export const InfoRow = styled.div`
     grid-auto-columns: mixmax(auto, 1fr);
     aligh-items: center;
     grid-template-areas: ${({imgStart}) => (imgStart ? `'col2 col1'` : `'col1 col2'`)};
-
     @media screen and (max-width: 768px) { 
         grid-template-areas: ${({imgStart}) => (imgStart ? `'col1' 'col2'` : `'col1 col1' 'col2 col2'`)}
     }
@@ -64,8 +61,7 @@ export const Heading = styled.h1`
     font-size: 48px;
     line-height: 1.1;
     font-weight: 600;
-    color: ${({lightText}) => (lightText ? 'f7f8fa' : '010606')};
-
+    color: ${({lightText}) => (lightText ? '#f7f8fa' : '#010606')};
     @media screen and (max-width: 480px) {
         font-size: 32px; 
     }

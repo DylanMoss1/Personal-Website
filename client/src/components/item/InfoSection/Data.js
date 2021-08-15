@@ -1,16 +1,34 @@
 export const homeObjOne = {
     id: 'about',
+    lightBg: true,
+    lightText: false,
+    lightTextDesc: false,
+    topLine: "Python / C++",
+    headline: "Project Gary",
+    description1: "This is some test text to see how this looks. Come visit the github to see more :) Hello world",
+    description2: "This is some test text to see how this looks. Come visit the github to see more :) Hello world",
+    buttonLabel: "Visit Github",
+    imgStart: false, 
+    img: require('../../imgs/rubiks_cube.png').default,
+    alt: "Img desc",
+    dark: false,
+    primary:  true,
+    darkText: true,
+};
+
+export const homeObjTwo = {
+    id: 'about',
     lightBg: false,
     lightText: true,
     lightTextDesc: true,
-    topLine: "Premium Bank",
-    headline: "Bob",
-    description: "Get access",
-    buttonLabel: "Get started",
+    topLine: "Python / C++",
+    headline: "Project Gary",
+    description: "This is some test text to see how this looks. Come visit the github to see more :) Hello world",
+    buttonLabel: "Visit Github",
     imgStart: false, 
-    img: require('../../imgs/img-9.jpg'),
+    img: require('../../imgs/rubiks_cube.png').default,
     alt: "Img desc",
-    dark: true, //button
+    dark: true,
     primary:  true,
     darkText: false,
-}
+};

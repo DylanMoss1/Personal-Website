@@ -1,17 +1,13 @@
 import React from 'react'; 
 import '../../App.css';
 import MainTitle from '../item/MainTitle/MainTitle';
-import AboutMe from '../item/AboutMe/AboutMe';
-import InfoSection from '../item/InfoSection/InfoSection';
-import { homeObjOne } from '../item/InfoSection/Data';
-
+import AboutMePanel from '../item/AboutMePanel/AboutMePanel';
 
 function Home() {
     return (
         <>
             <MainTitle />
-            <AboutMe />
-            <InfoSection {...homeObjOne} />
+            <AboutMePanel />
         </>
     )
 }
