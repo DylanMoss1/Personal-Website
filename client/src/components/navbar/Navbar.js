@@ -29,7 +29,7 @@ function Navbar() {
       <nav className='navbar'>
         <div className='navbar-container'>
           <Link to='/' className='navbar-logo' onClick={closeMobileMenu}>
-            Dylan Moss
+            <b>Dylan Moss</b>
           </Link>
           <div className='menu-icon' onClick={handleClick}>
             <i className={click ? 'fas fa-times' : 'fas fa-bars'} />
@@ -47,17 +47,17 @@ function Navbar() {
             </li>
             <li className='nav-item'>
               <Link to='/rubiks' className='nav-links' onClick={closeMobileMenu}>
-                Rubik's Cube Solver
+                Rubik's Cube
               </Link>
             </li>
             <li className='nav-item'>
               <Link to='/this' className='nav-links' onClick={closeMobileMenu}>
-                This Website
+                Portfolio
               </Link>
             </li>
             <li className='nav-item'>
               <Link to='/gantt' className='nav-links' onClick={closeMobileMenu}>
-                Gantt Chart Creator
+                Gantt Chart
               </Link>
             </li>
             <li className='nav-item'>

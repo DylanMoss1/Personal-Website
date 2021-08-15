@@ -2,7 +2,8 @@ import React from 'react';
 import '../../App.css';
 import MainTitle from '../item/MainTitle/MainTitle';
 import AboutMe from '../item/AboutMe/AboutMe';
-import PersonalProjects from '../item/PersonalProjects/PersonalProjects';
+import InfoSection from '../item/InfoSection/InfoSection';
+import { homeObjOne } from '../item/InfoSection/Data';
 
 
 function Home() {
@@ -10,7 +11,7 @@ function Home() {
         <>
             <MainTitle />
             <AboutMe />
-            <PersonalProjects />
+            <InfoSection {...homeObjOne} />
         </>
     )
 }
