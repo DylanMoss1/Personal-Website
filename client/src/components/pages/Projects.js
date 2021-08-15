@@ -1,12 +1,12 @@
 import React from 'react'; 
 import '../../App.css';
 
-function This() {
+function Projects() {
     return (
         <>
-            <h1>This</h1>
+            <h1>Projects</h1>
         </>
     )
 }
 
-export default This;
+export default Projects;

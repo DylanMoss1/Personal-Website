@@ -1,11 +1,9 @@
 import './App.css';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Home from './components/pages/Home';
-import Gary from './components/pages/Gary';
-import Rubiks from './components/pages/Rubiks';
-import This from './components/pages/This';
-import Gantt from './components/pages/Gantt';
-import Other from './components/pages/Other';
+import AboutMe from './components/pages/AboutMe';
+import Projects from './components/pages/Projects';
+import ContactMe from './components/pages/ContactMe';
 import Navbar from './components/navbar/Navbar';
 import Footer from './components/footer/Footer';
 
@@ -16,11 +14,9 @@ function App() {
         <Navbar />
         <Switch>
           <Route path='/' exact component={Home} /> 
-          <Route path='/gary' component={Gary} />
-          <Route path='/rubiks' component={Rubiks} />
-          <Route path='/this' component={This} />
-          <Route path='/gantt' component={Gantt} />
-          <Route path='/other' component={Other} />
+          <Route path='/aboutme' component={AboutMe} />
+          <Route path='/projects' component={Projects} />
+          <Route path='/contactme' component={ContactMe} />
         </Switch>
         <Footer />
       </Router>

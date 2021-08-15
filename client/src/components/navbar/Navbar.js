@@ -41,28 +41,18 @@ function Navbar() {
               </Link>
             </li>
             <li className='nav-item'>
-              <Link to='/gary' className='nav-links' onClick={closeMobileMenu}>
-                Project Gary
+              <Link to='/aboutme' className='nav-links' onClick={closeMobileMenu}>
+                About Me
               </Link>
             </li>
             <li className='nav-item'>
-              <Link to='/rubiks' className='nav-links' onClick={closeMobileMenu}>
-                Rubik's Cube
+              <Link to='/projects' className='nav-links' onClick={closeMobileMenu}>
+                Projects
               </Link>
             </li>
             <li className='nav-item'>
-              <Link to='/this' className='nav-links' onClick={closeMobileMenu}>
-                Portfolio
-              </Link>
-            </li>
-            <li className='nav-item'>
-              <Link to='/gantt' className='nav-links' onClick={closeMobileMenu}>
-                Gantt Chart
-              </Link>
-            </li>
-            <li className='nav-item'>
-              <Link to='/other' className='nav-links' onClick={closeMobileMenu}>
-                Other Projects
+              <Link to='/contactme' className='nav-links' onClick={closeMobileMenu}>
+                Contact Me
               </Link>
             </li>
           </ul>

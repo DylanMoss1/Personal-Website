@@ -1,12 +1,12 @@
 import React from 'react'; 
 import '../../App.css';
 
-function Gary() {
+function AboutMe() {
     return (
         <>
-            <h1>Gary</h1>
+            <h1>AboutMe</h1>
         </>
     )
 }
 
-export default Gary;
+export default AboutMe;

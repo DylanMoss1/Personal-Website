@@ -1,12 +1,12 @@
 import React from 'react'; 
 import '../../App.css';
 
-function Other() {
+function ContactMe() {
     return (
         <>
-            <h1>Other</h1>
+            <h1>ContactMe</h1>
         </>
     )
 }
 
-export default Other;
+export default ContactMe;
