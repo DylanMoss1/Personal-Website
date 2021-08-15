@@ -2,7 +2,7 @@ import React from 'react';
 import '../../App.css';
 import InfoSection from '../item/InfoSection/InfoSection';
 import HeadingTitle from "../item/HeadingTitle/HeadingTitle";
-import { homeObjOne, homeObjTwo } from '../item/InfoSection/Data';
+import { homeObjOne, homeObjTwo, homeObjThree, homeObjFour, homeObjFive } from '../item/InfoSection/Data';
 
 function Projects() {
     return (
@@ -11,6 +11,9 @@ function Projects() {
                 <HeadingTitle text="Projects" />
                 <InfoSection {...homeObjOne} />
                 <InfoSection {...homeObjTwo} />
+                <InfoSection {...homeObjThree} />
+                <InfoSection {...homeObjFour} />
+                <InfoSection {...homeObjFive} />
             </div>
         </>
     )

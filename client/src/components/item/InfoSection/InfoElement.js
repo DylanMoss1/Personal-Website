@@ -2,7 +2,7 @@ import styled from 'styled-components'
 
 export const InfoContainer = styled.div`
     color: #fff;
-    background: ${({lightBg}) => (lightBg ? '#f9f9f9' : '#010606')};
+    background: ${({darkPanelBg}) => (darkPanelBg ? '#010606' : '#f9f9f9')};
     @media screen and (max-width: 768px) {
         padding: 100px 0;
     }
@@ -47,7 +47,7 @@ export const TextWrapper = styled.div`
 `
 
 export const TopLine = styled.div`
-    color: #01bf71;
+    color: ${({darkPanelText}) => (darkPanelText ? '#01bf71' : '#00985a')};
     font-size: 16px;
     line-height: 16px;
     font weight: 700;
@@ -61,7 +61,7 @@ export const Heading = styled.h1`
     font-size: 48px;
     line-height: 1.1;
     font-weight: 600;
-    color: ${({lightText}) => (lightText ? '#f7f8fa' : '#010606')};
+    color: ${({darkPanelText}) => (darkPanelText ? '#f7f8fa' : '#010606')};
     @media screen and (max-width: 480px) {
         font-size: 32px; 
     }
@@ -72,7 +72,7 @@ export const Subtitle = styled.p`
     margin-bottom: 35px;
     font-size: 18px;
     line-height: 24px;
-    color: ${({darkText}) => (darkText ? '#010606' : '#fff')};
+    color: ${({darkPanelText}) => (darkPanelText ? '#fff' : '#010606')};
 `
 
 export const BtnWrap = styled.div`
@@ -86,7 +86,9 @@ export const ImgWrap = styled.div`
 `
 
 export const Img = styled.img`
-    width:100%;
+    border-radius: 20px;
+    width:85%;
     margin: 0 0 10px 0;
-    padding-right: 0;
+    margin-left: ${({leftImg}) => (leftImg ? '-20px' : '110px')};
+    margin-right: 0px;
 `
