@@ -1,3 +1,4 @@
 - Change dyno name
 - Remove username and password for mongodb from private info
 - Check if mongodb correctly installs
+- Remove redundent CSS (eg. buttons in Main Title)
