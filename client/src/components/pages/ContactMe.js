@@ -1,10 +1,13 @@
 import React from 'react'; 
 import '../../App.css';
+import HeadingTitle from "../item/HeadingTitle/HeadingTitle";
 
 function ContactMe() {
     return (
         <>
-            <h1>ContactMe</h1>
+            
+            <HeadingTitle text="Contact Me" />
+            
         </>
     )
 }

@@ -1,10 +1,10 @@
 .navbar {
-  background: #242424;
+  background: #1d1d1d;
   height: 80px;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 1.2rem;
+  font-size: 1.35rem;
   position: sticky;
   top: 0;
   z-index: 999;
@@ -21,7 +21,7 @@
 .navbar-logo {
   color: #fff;
   justify-self: start;
-  margin-left: 20px;
+  margin-left: -180px;
   cursor: pointer;
   text-decoration: none;
   font-size: 2rem;
@@ -42,7 +42,7 @@
   text-align: center;
   width: 60vw;
   justify-content: end;
-  margin-right: 2rem;
+  margin-right: 0rem;
 }
 
 .nav-item {

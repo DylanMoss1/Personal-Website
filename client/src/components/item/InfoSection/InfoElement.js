@@ -12,7 +12,7 @@ export const InfoWrapper = styled.div`
     display: grid;
     z-index: 1;
     width: 100%;
-    max-wdth: 1100px;
+    max-width: 1500px;
     margin-right: auto;
     margin-left: auto;
     padding: 120px 120px;
@@ -23,6 +23,7 @@ export const InfoRow = styled.div`
     display: grid;
     grid-auto-columns: mixmax(auto, 1fr);
     aligh-items: center;
+    width: auto;
     grid-template-areas: ${({imgStart}) => (imgStart ? `'col2 col1'` : `'col1 col2'`)};
     @media screen and (max-width: 768px) { 
         grid-template-areas: ${({imgStart}) => (imgStart ? `'col1' 'col2'` : `'col1 col1' 'col2 col2'`)}
@@ -42,6 +43,7 @@ export const Column2 = styled.div`
 
 export const TextWrapper = styled.div`
     max-width: 540px;
+    margin-left: ${({leftText}) => (leftText ? '0px' : '130px')};
     padding-top: 0;
     padding-bottom: 60px;
 `
@@ -87,8 +89,9 @@ export const ImgWrap = styled.div`
 
 export const Img = styled.img`
     border-radius: 20px;
-    width:85%;
-    margin: 0 0 10px 0;
-    margin-left: ${({leftImg}) => (leftImg ? '-20px' : '110px')};
+    margin-bottom: 10px;
+    margin-left: ${({leftImg}) => (leftImg ? '0px' : '130px')};
     margin-right: 0px;
+    width: auto;
+    height: 330px;
 `
