@@ -7,11 +7,25 @@ import ContactMe from './components/pages/ContactMe';
 import Navbar from './components/navbar/Navbar';
 import Footer from './components/footer/Footer';
 
+import { useEffect } from "react";
+import { useLocation } from "react-router-dom";
+
+function ScrollToTop() {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+
+  return null;
+}
+
 function App() {
   return (
     <>
       <Router>
         <Navbar />
+        <ScrollToTop />
         <Switch>
           <Route path='/' exact component={Home} /> 
           <Route path='/aboutme' component={AboutMe} />

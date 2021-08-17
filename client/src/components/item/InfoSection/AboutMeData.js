@@ -1,0 +1,50 @@
+export const whoAmIInfoPanel = {
+    id: 'about',
+    darkPanel: false,
+    headline: "Who Am I",
+    description1: "My name is Dylan and I am currently in my second year studying Computer Science at the University of Cambridge",
+    description2: "I love learning new technolgies and skills which allow me to build interesting programs",
+    description3: "",
+    button: false,
+    buttonLabel: "",
+    imgStart: false, 
+    img: require('../../imgs/Selection_009.png').default, // 17/14/9
+    circleImg: true,
+    alt: "Img desc",
+    primary:  true,
+    arrow: true,
+};
+
+export const compSciInterestsInfoPanel = {
+    id: 'about',
+    darkPanel: false,
+    headline: "Computer Science Interests",
+    description1: "",
+    description2: "",
+    description3: "",
+    button: false,
+    buttonLabel: "Visit Github",
+    imgStart: true,
+    img: require('../../imgs/code3.jpg').default,
+    circleImg: true,
+    alt: "Img desc",
+    primary:  true,
+    arrow: true,
+};
+
+export const outsideOfCompSciInfoPanel = {
+    id: 'about',
+    darkPanel: false,
+    headline: "Outside of Computer Science",
+    description1: "I have been a Scout for over 10 years, and gone on to become a Scouting Young Leader for a further 4 years",
+    description2: "I also love reading and my favourite genres are fantasy and sci-fi",
+    description3: "",
+    button: false,
+    buttonLabel: "Visit Github",
+    imgStart: false,
+    img: require('../../imgs/scouts4.png').default,
+    circleImg: true,
+    alt: "Img desc",
+    primary:  true,
+    arrow: true,
+};
