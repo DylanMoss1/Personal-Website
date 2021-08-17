@@ -13,32 +13,3 @@ function MainTitle() {
 }
 
 export default MainTitle;
-
-/*
-<div className='hero-btns'>
-        <Button
-          className='btns'
-          buttonStyle='btn--outline'
-          buttonSize='btn--large'
-          link='about'
-        >
-          ABOUT
-        </Button>
-        <Button
-          className='btns'
-          buttonStyle='btn--outline'
-          buttonSize='btn--large'
-          link='projects'
-        >
-          PROJECTS
-        </Button>
-        <Button
-          className='btns'
-          buttonStyle='btn--outline'
-          buttonSize='btn--large'
-          link='contact'
-        >
-          CONTACT
-        </Button>
-      </div>
-*/

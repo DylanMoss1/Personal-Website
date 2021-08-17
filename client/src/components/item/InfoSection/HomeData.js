@@ -1,0 +1,52 @@
+export const aboutMeInfoPanel = {
+    id: 'about',
+    darkPanel: true,
+    headline: "About Me",
+    description1: "My name is Dylan and I am currently in my second year studying Computer Science at the University of Cambridge",
+    description2: "I love programming and building new things",
+    description3: "Click here to find out more",
+    button: true,
+    buttonLabel: "About Me",
+    imgStart: false, 
+    img: require('../../imgs/Selection_009.png').default, // 17/14/9
+    circleImg: true,
+    alt: "Img desc",
+    primary:  true,
+    arrow: true,
+};
+
+export const projectsInfoPanel = {
+    id: 'about',
+    darkPanel: false,
+    topLine: "",
+    headline: "Projects",
+    description1: "I love learning new technologies and have build lots of programs to learn new skills and apply them to solve real life problems",
+    description2: "These include humanoid robots, rubik's cube solvers, websites and more!",
+    description3: "Click here to find out more",
+    button: true,
+    buttonLabel: "Projects",
+    imgStart: true, 
+    img: require('../../imgs/Gary.svg').default,
+    circleImg: false,
+    alt: "Img desc",
+    primary:  true,
+    arrow: true,
+};
+
+export const contactMeInfoPanel = {
+    id: 'about',
+    darkPanel: true,
+    topLine: "",
+    headline: "Contact Me",
+    description1: "If you want to have a chat, send me a message",
+    description2: "I would love to find an internship for the summer of 2022, if you have any opportunities please let me know",
+    description3: "Click here to send a message",
+    button: true,
+    buttonLabel: "Contact Me",
+    imgStart: false, 
+    img: require('../../imgs/email.png').default,
+    circleImg: false,
+    alt: "Img desc",
+    primary:  true,
+    arrow: true,
+};
