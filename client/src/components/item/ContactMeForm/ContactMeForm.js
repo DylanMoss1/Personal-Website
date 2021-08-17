@@ -1,6 +1,6 @@
 import React from 'react';
 import '../../../App.css';
-import { Container, Form, FormH1, FormContent, FormInput, FormLabel, FormButton, FormWrap, Icon } from './ContactMeFormElements';
+import { Container, Form, FormH1, FormContent, FormInput, FormLabel, FormButton, FormWrap } from './ContactMeFormElements';
 
 function MultiLineInput() {
     return (
