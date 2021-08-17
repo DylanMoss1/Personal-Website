@@ -8,30 +8,30 @@ function Footer() {
       <section class='social-media'>
           <div class='social-media-wrap'>
             <div class='social-icons'>
-              <Link
+              <a
                 class='social-icon-link email'
-                to='/'
+                href='mailto: dm894@cam.ac.uk'
                 target='_blank'
                 aria-label='Email'
               >
                 <i class='fas fa-envelope fa-lg' />
-              </Link>
-              <Link
+              </a>
+              <a
                 class='social-icon-link github'
-                to='/'
+                href='https://github.com/DylanMoss1'
                 target='_blank'
                 aria-label='Github'
               >
                 <i class='fab fa-github fa-lg' />
-              </Link>
-              <Link
+              </a>
+              <a
                 class='social-icon-link linkedin'
-                to='/'
+                href='https://www.linkedin.com/in/dylan-moss-455a54178/'
                 target='_blank'
                 aria-label='LinkedIn'
               >
                 <i class='fab fa-linkedin fa-lg' />
-              </Link>
+              </a>
             </div>
           </div>
         </section>
