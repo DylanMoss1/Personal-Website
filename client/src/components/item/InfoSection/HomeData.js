@@ -18,7 +18,7 @@ export const aboutMeInfoPanel = {
 };
 
 export const projectsInfoPanel = {
-    id: 'about',
+    id: 'projects',
     darkPanel: false,
     topLine: "",
     headline: "Projects",
@@ -38,7 +38,7 @@ export const projectsInfoPanel = {
 };
 
 export const contactMeInfoPanel = {
-    id: 'about',
+    id: 'contact',
     darkPanel: true,
     topLine: "",
     headline: "Contact Me",

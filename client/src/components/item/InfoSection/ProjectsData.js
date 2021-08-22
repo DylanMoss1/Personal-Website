@@ -1,5 +1,5 @@
 export const garyInfoPanel = {
-    id: 'about',
+    id: 'gary',
     darkPanel: false,
     topLine: "Python & C++",
     headline: "Project Gary",
@@ -19,7 +19,7 @@ export const garyInfoPanel = {
 };
 
 export const rubiksInfoPanel = {
-    id: 'about',
+    id: 'rubiks',
     darkPanel: true,
     topLine: "Java & OpenGL",
     headline: "Rubik's Cube Solver",
@@ -38,7 +38,7 @@ export const rubiksInfoPanel = {
 };
 
 export const portfolioInfoPanel = {
-    id: 'about',
+    id: 'portfolio',
     darkPanel: false,
     topLine: "JavaScript: MERN Stack",
     headline: "Personal Portfolio Website",
@@ -57,7 +57,7 @@ export const portfolioInfoPanel = {
 };
 
 export const ganttInfoPanel = {
-    id: 'about',
+    id: 'gantt',
     darkPanel: true,
     topLine: "JavaScript: React & Firebase",
     headline: "Gantt Chart Creator",
@@ -76,7 +76,7 @@ export const ganttInfoPanel = {
 };
 
 export const otherInfoPanel = {
-    id: 'about',
+    id: 'other',
     darkPanel: false,
     topLine: "Python / JavaScript",
     headline: "Other Projects",

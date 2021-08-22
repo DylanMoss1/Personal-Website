@@ -1,5 +1,5 @@
 export const whoAmIInfoPanel = {
-    id: 'about',
+    id: 'who',
     darkPanel: false,
     headline: "Who Am I",
     description1: "My name is Dylan and I am currently in my second year studying Computer Science at Queens' College, University of Cambridge",
@@ -18,7 +18,7 @@ export const whoAmIInfoPanel = {
 };
 
 export const compSciInterestsInfoPanel = {
-    id: 'about',
+    id: 'compsci',
     darkPanel: true,
     headline: "Computer Science Interests",
     description1: "My favourite languages are Python, Java, JavaScript and C++",
@@ -37,7 +37,7 @@ export const compSciInterestsInfoPanel = {
 };
 
 export const outsideOfCompSciInfoPanel = {
-    id: 'about',
+    id: 'noncompsci',
     darkPanel: false,
     headline: "Outside of Computer Science",
     description1: "I love the Scouting community and have been a Scout for over 10 years, and gone on to become a Scouting Young Leader for a further 4 years",
