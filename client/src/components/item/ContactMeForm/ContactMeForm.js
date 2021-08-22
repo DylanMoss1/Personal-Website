@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import '../../../App.css';
-import { Container, Form, FormH1, FormContent, FormInput, FormLabel, FormButton, FormWrap } from './ContactMeFormElements';
+
+import { Container, Form, FormH1, FormContent, FormInput, FormLabel, FormButton, FormWrap, Text } from './ContactMeFormElements';
 
 function MultiLineInput() {
     return (
@@ -8,21 +9,22 @@ function MultiLineInput() {
     )
 }
 
-function ContactMeForm() {
+function ContactMeForm( {success} ) {
     return (
         <>
             <Container>
                 <FormWrap>
                     <FormContent>
-                        <Form action="#">
+                        <Form action="/contactme-submit" method="POST">
                             <FormH1>Send me a message</FormH1>
                             <FormLabel htmlFor="for">Name</FormLabel>
-                            <FormInput type="name" required />
+                            <FormInput name="name" type="name" required />
                             <FormLabel htmlFor="for">Your email address</FormLabel>
-                            <FormInput type="email" required />
+                            <FormInput name="email" type="email" required />
                             <FormLabel htmlFor="for">Message</FormLabel>
-                            <MultiLineInput />
-                            <FormButton type="submit">Continue</FormButton>
+                            <MultiLineInput name="message"/>
+                            <FormButton type="submit">Submit</FormButton>
+                            <Text>{success ? "Message submitted" : ""}</Text>:
                         </Form>
                     </FormContent>
                 </FormWrap>
@@ -30,5 +32,5 @@ function ContactMeForm() {
         </>
     );
 }
-  
+
 export default ContactMeForm;
