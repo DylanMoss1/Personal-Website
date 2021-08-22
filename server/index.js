@@ -31,6 +31,7 @@ try{
 }
 
 const client = new MongoClient(uri);
+var blacklisted = [];
 
 app.set('port', port);
 app.use(cors());
@@ -46,7 +47,29 @@ const transporter = nodemailer.createTransport({
     }
 });
 
-function sanatize_input(input) {
+const send_email = (name, email, message) => { 
+
+    if (!(email in blacklisted)){
+        var msg = name + "\n\n" + email + "\n\n" + message;
+
+        var mailOptions = {
+            from: email,
+            to: 'dm894@cam.ac.uk',
+            subject: 'Website Contact Me Request',
+            text: msg
+        };
+
+        transporter.sendMail(mailOptions, function(error, info){
+            if (error) {
+                console.log(error);
+            } else {
+                console.log('Email sent: ' + info.response);
+            }
+        }); 
+    }
+}
+
+const sanatize_input = (input) => {
     var clean = sanitizer.sanitize(input, function(str) {
         return str;
     });
@@ -61,9 +84,9 @@ app.post("/contactme-submit", (req, res) => {
     let name = sanatize_input(req.body.name);
     let email = sanatize_input(req.body.email);
     let message = sanatize_input(req.body.message);
-    console.log(name);
-    console.log(email);
-    console.log(message);
+    
+    send_email(name, email, message);
+
     res.sendFile(path.resolve(__dirname, '../client/build', 'index.html'));
 });
 
@@ -103,12 +126,7 @@ app.listen(port, async() => {
 
     console.log(`server has started on port ${port}`);
     
-    var mailOptions = {
-        from: email,
-        to: 'dylan.moss2001@gmail.com',
-        subject: 'Sending Email using Node.js',
-        text: 'That was easy!'
-    };
+    
 
     /*
     try {
