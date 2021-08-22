@@ -6,15 +6,13 @@ import { garyInfoPanel, rubiksInfoPanel, portfolioInfoPanel, ganttInfoPanel, oth
 
 function Projects() {
     return (
-        <>
-            
+        <>  
             <HeadingTitle text="Projects" />
             <InfoSection {...garyInfoPanel} />
             <InfoSection {...rubiksInfoPanel} />
             <InfoSection {...portfolioInfoPanel} />
             <InfoSection {...ganttInfoPanel} />
             <InfoSection {...otherInfoPanel} />
-            
         </>
     )
 }

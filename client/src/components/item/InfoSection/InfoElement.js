@@ -43,9 +43,12 @@ export const Column2 = styled.div`
 
 export const TextWrapper = styled.div`
     max-width: 540px;
-    margin-left: ${({leftText}) => (leftText ? '0px' : '130px')};
     padding-top: 0;
     padding-bottom: 60px;
+    @media screen and (max-width: 768px) {
+        margin-left: 0px;
+    }
+    margin-left: ${({leftText}) => (leftText ? '0px' : '130px')};
 `
 
 export const TopLine = styled.div`
@@ -90,8 +93,13 @@ export const ImgWrap = styled.div`
 export const Img = styled.img`
     border-radius: ${({circleImg}) => circleImg ? "50%" : "20px"};
     margin-bottom: 10px;
-    margin-left: ${({leftImg}) => (leftImg ? '0px' : '130px')};
     margin-right: 0px;
     width: auto;
     height: 330px;
+    max-width: 100%;
+    @media screen and (max-width: 768px) {
+        height:200px;
+        margin-left: 0px;
+    }
+    margin-left: ${({leftImg}) => (leftImg ? '0px' : '130px')};
 `

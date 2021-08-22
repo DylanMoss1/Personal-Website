@@ -54,6 +54,11 @@
   font-size: 1rem;
 }
 
+.credits {
+  color: #fff;
+  text-decoration: none;
+}
+
 @media screen and (max-width: 820px) {
   .footer-links {
     padding-top: 2rem;

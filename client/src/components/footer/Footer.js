@@ -36,6 +36,7 @@ function Footer() {
           </div>
         </section>
         <small class='website-rights'>Dylan Moss © 2021</small>
+        <small class="website-rights"><a class="credits" href="http://www.videezy.com/">Free Stock Video Footage by Videezy.com</a></small>
       </div>
   );
 }
