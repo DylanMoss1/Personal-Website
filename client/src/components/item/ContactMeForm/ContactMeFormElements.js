@@ -43,7 +43,7 @@ export const Form = styled.form`
     z-index: 1;
     display: grid;
     margin: 20px auto;
-    padding: 60px 70px 60px 70px;
+    padding: 60px 70px 30px 70px;
     border-radius: 15px; 
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.9);
     outline: 5px solid #01bf71;
@@ -86,7 +86,7 @@ export const FormButton = styled.button`
 
 export const Text = styled.span`
     text-align: center;
-    margin-top: 24px;
-    color: #fff;
-    font-size: 14px;
+    margin-top: 40px;
+    color: #01bf71;
+    font-size: 20px;
 `;

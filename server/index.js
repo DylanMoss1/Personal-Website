@@ -2,6 +2,9 @@ const express = require("express");
 const app = express();
 const cors = require("cors");
 const path = require('path');
+const bodyParser = require('body-parser');
+
+const sanitizer = require('sanitizer');
 
 const { MongoClient } = require('mongodb');
 
@@ -9,6 +12,7 @@ const port = process.env.PORT || 4000;
 
 const nodemailer = require('nodemailer'); 
 const { response } = require("express");
+const { nextTick } = require("process");
 
 var email;
 var password;
@@ -21,9 +25,9 @@ try{
     uri = private_info.uri;
 
 } catch (e) {
-    email = process.env.EMAIL_ADDRESS
-    password = process.env.EMAIL_PASSWORD
-    uri = process.env.MONGODB_URI
+    email = process.env.EMAIL_ADDRESS;
+    password = process.env.EMAIL_PASSWORD;
+    uri = process.env.MONGODB_URI;
 }
 
 const client = new MongoClient(uri);
@@ -32,6 +36,7 @@ app.set('port', port);
 app.use(cors());
 app.use(express.json());
 app.use(express.static(path.resolve(__dirname, '../client/build')));
+app.use(bodyParser.urlencoded({ extended: true })); 
 
 const transporter = nodemailer.createTransport({
     service: 'gmail',
@@ -41,33 +46,43 @@ const transporter = nodemailer.createTransport({
     }
 });
 
+function sanatize_input(input) {
+    var clean = sanitizer.sanitize(input, function(str) {
+        return str;
+    });
+
+    clean = clean.replace(/<(?:.|\n)*?>/gm, "");
+    clean = clean.replace(/(?:(?:\r\n|\r|\n)\s*){2,}/ig, "\n");
+    return clean.trim();
+}
+
+  
+app.post("/contactme-submit", (req, res) => {
+    let name = sanatize_input(req.body.name);
+    let email = sanatize_input(req.body.email);
+    let message = sanatize_input(req.body.message);
+    console.log(name);
+    console.log(email);
+    console.log(message);
+    res.sendFile(path.resolve(__dirname, '../client/build', 'index.html'));
+});
+
 app.get("/api", (req, res) => {
     res.json({ message: "Hello from server!" });
 });
 
 app.get("/db", async (req,res) => {
-
     try { 
-
         await client.connect();
-
         const results = await client.db("ContactRequests").collection("contact_me").findOne({name: "Dylan"});
-    
-        console.log(results)
+        console.log(results);
         console.log(results.content);
-
         res.json({ message: results.content });
-
     } catch (e) {
-
         console.log(e);
-
     } finally {
-
         await client.close();
-
-    }
-    
+    } 
 });
 
 app.get('*', (req, res) => {
@@ -95,6 +110,7 @@ app.listen(port, async() => {
         text: 'That was easy!'
     };
 
+    /*
     try {
 
         await client.connect();
@@ -110,6 +126,7 @@ app.listen(port, async() => {
         await client.close();
 
     }
+    */
 
     /*
     transporter.sendMail(mailOptions, function(error, info){

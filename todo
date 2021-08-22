@@ -1,3 +1,6 @@
-- Remove username and password for mongodb from private info
 - Remove redundent CSS (eg. buttons in Main Title)
 - update id's of all data files
+- add contact me data inputs
+- add validation to data inputs 
+- set up automatic email response
+- add requests to database

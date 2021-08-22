@@ -30,7 +30,8 @@ function App() {
           <Route path='/' exact component={Home} /> 
           <Route path='/aboutme' component={AboutMe} />
           <Route path='/projects' component={Projects} />
-          <Route path='/contactme' component={ContactMe} />
+          <Route path='/contactme' component={() => <ContactMe success={false} />} />
+          <Route path='/contactme-submit' component={() => <ContactMe success={true}/>} />
         </Switch>
         <Footer />
       </Router>

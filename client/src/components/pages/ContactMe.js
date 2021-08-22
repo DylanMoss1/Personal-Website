@@ -3,12 +3,12 @@ import '../../App.css';
 import HeadingTitle from "../item/HeadingTitle/HeadingTitle";
 import ContactMeForm from '../item/ContactMeForm/ContactMeForm';
 
-function ContactMe() {
+function ContactMe( {success} ) {
     return (
         <>
             
-            <HeadingTitle text="Contact Me" />
-            <ContactMeForm />
+            <HeadingTitle text="Contact Me"/>
+            <ContactMeForm success={success} />
         </>
     )
 }
