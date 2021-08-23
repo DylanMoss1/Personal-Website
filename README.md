@@ -14,9 +14,9 @@ Another useful tool I used was Docker containers, learning how to effectively bu
 
 Most of these technologies such as React and Docker were new to me but I learnt a great deal about them when building this website.
 
-I also got a chance to focus on the UI of my website, many of my previous projects have been focussed primarily on the backend but using React allowed me to invest some time learning how to create an effective UI as well. I found this really enjoyable as I enjoy designing things and I felt like I was able to finally put into practice some of the skills I learnt during my Graphics Design GCSE. 
+I got a chance to focus on the UI of my website, many of my previous projects have been focussed primarily on the backend but using React allowed me to invest some time learning how to create an effective UI as well. I found this really enjoyable as I enjoy designing things and I felt like I was able to finally put into practice some of the skills I learnt during my Graphics Design GCSE. 
 
-I learnt how to create an engaging UI design as well as how to make a functioning back-end that could interact well with the front-end. I also picked up some good software development habits such as utilising multiple git branches when working on different parts of the website development concurrently. 
+I also picked up some good software development habits such as utilising multiple git branches when working on different parts of the website development concurrently so that new additions to the back-end and front-end wouldn't interfere with each other until they were complete. 
 
 I found out how to set up automatic push deployments from Github to Heroku and found this very interesting - I want to look deeper into how to implement CI/CD for my next website project. 
 
