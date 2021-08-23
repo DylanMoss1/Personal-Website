@@ -18,6 +18,8 @@ Most of these technologies such as React and Docker were new to me but I learnt 
 
 I also got a chance to focus on the UI of my website, many of my previous projects have been focussed primarily on the backend but using React allowed me to invest some time learning how to create an effective UI as well. I found this really enjoyable as I enjoy designing things and I felt like I was able to finally put into practice some of the skills I learnt during my Graphics Design GCSE. 
 
+Credits to Brian Design for some of the CSS components used in the project
+
 
 
 
