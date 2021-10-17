@@ -2,7 +2,7 @@ export const garyInfoPanel = {
     id: 'gary',
     darkPanel: false,
     topLine: "Python & C++",
-    headline: "Project Gary",
+    headline: "Wyropa",
     description1: "I am a co-founder of Wyropa; a small, dedicated team funded by the University of Cambridge with the aim to try and build the world's most advanced biomimetic robot",
     description2: "We have been working hard this summer to try and build a prototype for the robot's arm, trying to match the dexterity of a real human's arm",
     description3: "",
